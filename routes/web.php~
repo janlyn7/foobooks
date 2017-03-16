@@ -26,8 +26,6 @@ Route::get('/books', 'BookController@index');
 
 Route::any('/practice/{n?}', 'PracticeController@index');
 
-Route::get('/books/{title}', 'BookController@show');
-
 Route::get('/book/{title?}', function($title = '') {
     if ($title == '') {
         return "Your request did not have a title";
